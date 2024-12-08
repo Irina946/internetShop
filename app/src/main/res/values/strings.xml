@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">InternetShop</string>
+    <string name="createAcc">Создайте аккаунт</string>
+    <string name="input_login">Введите логин</string>
+    <string name="input_email">Введите email</string>
+    <string name="input_password">Введите пароль</string>
+    <string name="buttonReg">Регистрация</string>
+</resources>
