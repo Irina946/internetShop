@@ -6,4 +6,6 @@
     <color name="text">#545A58</color>
     <color name="hint">#939E9A</color>
     <color name="button">#FFEF9F</color>
+    <color name="bgYellow">#FFF7CF</color>
+    <color name="green">#C1FBA4</color>
 </resources>

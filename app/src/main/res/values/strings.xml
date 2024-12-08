@@ -5,4 +5,8 @@
     <string name="input_email">Введите email</string>
     <string name="input_password">Введите пароль</string>
     <string name="buttonReg">Регистрация</string>
+    <string name="authAcc">Войдите в аккаунт</string>
+    <string name="buttonAuth">Войти</string>
+    <string name="reg">Зарегистрироваться</string>
+    <string name="authText">Войти в аккаунт</string>
 </resources>

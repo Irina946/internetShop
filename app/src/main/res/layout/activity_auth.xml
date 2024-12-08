@@ -6,8 +6,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
-    tools:context=".MainActivity">
+    android:background="@color/bgYellow"
+    tools:context=".AuthActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,14 +15,14 @@
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
         android:fontFamily="@font/inter_extrabold"
-        android:text="@string/createAcc"
+        android:text="@string/authAcc"
         android:textColor="@color/text"
         android:textColorHint="@color/hint"
         android:textSize="25sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/user_login"
+        android:id="@+id/user_login_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -34,20 +34,9 @@
         android:textColor="@color/text"
         android:hint="@string/input_login" />
 
-    <EditText
-        android:id="@+id/user_email"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textColorHint="@color/hint"
-        android:textColor="@color/text"
-        android:hint="@string/input_email" />
 
     <EditText
-        android:id="@+id/user_password"
+        android:id="@+id/user_password_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -59,12 +48,12 @@
         android:hint="@string/input_password" />
 
     <Button
-        android:id="@+id/button_reg"
+        android:id="@+id/button_auth"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:text="@string/buttonReg"
+        android:text="@string/buttonAuth"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/button"
+        android:backgroundTint="@color/green"
         android:textColor="@color/text"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -72,16 +61,17 @@
         />
 
     <TextView
-        android:id="@+id/link_to_auth"
+        android:id="@+id/link_to_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/inter_extrabold"
-        android:text="@string/authText"
+        android:text="@string/reg"
         android:textColor="@color/text"
         android:textColorHint="@color/hint"
         android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
 </LinearLayout>
