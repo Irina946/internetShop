@@ -13,7 +13,7 @@ class ShoppingCartActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var totalPriceTextView: TextView
     private lateinit var checkoutButton: Button
-    private lateinit var buttonBack: Button  // Изменено на lateinit
+    private lateinit var buttonBack: Button
 
     private val cartItems = Singleton.CartManager.getItems()
 
@@ -25,7 +25,7 @@ class ShoppingCartActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.cart_recycler_view)
         totalPriceTextView = findViewById(R.id.total_price)
         checkoutButton = findViewById(R.id.button_checkout)
-        buttonBack = findViewById(R.id.button_back_cart)  // Здесь
+        buttonBack = findViewById(R.id.button_back_cart)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = CartAdapter(cartItems)
@@ -43,6 +43,7 @@ class ShoppingCartActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateTotalPrice() {
         val total = cartItems.sumOf { it.price }
         totalPriceTextView.text = "Итого: $total ₽"

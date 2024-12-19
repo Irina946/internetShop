@@ -11,8 +11,7 @@
 
     <include
         android:id="@+id/top_bar"
-        layout="@layout/top_bar"
-        />
+        layout="@layout/top_bar" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,4 +1,6 @@
 package com.example.internetshop
+
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +21,7 @@ class CartAdapter(private val items: List<CartItem>) :
         return CartViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val item = items[position]
         holder.itemName.text = item.title
