@@ -9,4 +9,10 @@
     <string name="buttonAuth">Войти</string>
     <string name="reg">Зарегистрироваться</string>
     <string name="authText">Войти в аккаунт</string>
+    <string name="items">Товары</string>
+    <string name="ViewButton">Посмотреть</string>
+    <string name="PayButton">Купить</string>
+    <string name="DescTitle">Описание товара:</string>
+    <string name="ButtonBack">Назад</string>
+    <string name="Cart">Корзина</string>
 </resources>

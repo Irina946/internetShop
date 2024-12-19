@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -25,51 +25,50 @@
         android:id="@+id/user_login"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="text"
-        android:layout_marginTop="20dp"
-
         android:layout_gravity="center"
-        android:textColorHint="@color/hint"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+
+        android:hint="@string/input_login"
+        android:inputType="text"
         android:textColor="@color/text"
-        android:hint="@string/input_login" />
+        android:textColorHint="@color/hint" />
 
     <EditText
         android:id="@+id/user_email"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:textColorHint="@color/hint"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/input_email"
+        android:inputType="textEmailAddress"
         android:textColor="@color/text"
-        android:hint="@string/input_email" />
+        android:textColorHint="@color/hint" />
 
     <EditText
         android:id="@+id/user_password"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:textColorHint="@color/hint"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/input_password"
+        android:inputType="textPassword"
         android:textColor="@color/text"
-        android:hint="@string/input_password" />
+        android:textColorHint="@color/hint" />
 
     <Button
         android:id="@+id/button_reg"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:text="@string/buttonReg"
+        android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/button"
+        android:text="@string/buttonReg"
         android:textColor="@color/text"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/link_to_auth"

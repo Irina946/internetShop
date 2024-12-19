@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             val email = userEmail.text.toString().trim()
             val pass = userPass.text.toString().trim()
 
-            if(login == "" || email == "" || pass == "")
+            if (login == "" || email == "" || pass == "")
                 Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show()
             else {
                 val user = User(login, email, pass)
