@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemsAdapter(private var items: List<Item>, private var context: Context) :
@@ -31,24 +32,26 @@ class ItemsAdapter(private var items: List<Item>, private var context: Context) 
         return items.count()
     }
 
-    @SuppressLint("SetTextI18n", "DiscouragedApi")
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.title.text = items[position].title
         holder.desc.text = items[position].desc
         holder.price.text = items[position].price.toString() + " ₽"
 
-        val imageId = context.resources.getIdentifier(
-            items[position].image,
-            "drawable",
-            context.packageName
-        )
+        val imageName = items[position].image
+        val imageId = context.resources.getIdentifier(imageName, "drawable", context.packageName)
 
-        holder.image.setImageResource(imageId)
+        if (imageId != 0) {
+            holder.image.setImageResource(imageId)
+        } else {
+            holder.image.setImageResource(R.drawable.gucci)
+            Toast.makeText(context, "Изображение не найдено: $imageName", Toast.LENGTH_SHORT).show()
+        }
 
         holder.button.setOnClickListener {
             val intent = Intent(context, ItemActivity::class.java)
 
-            intent.putExtra("itemImage", imageId)
+            intent.putExtra("itemImageName", imageName)
             intent.putExtra("itemTitle", items[position].title)
             intent.putExtra("itemDesc", items[position].text)
             intent.putExtra("itemPrice", items[position].price.toString() + " ₽")

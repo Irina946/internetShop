@@ -13,47 +13,24 @@
         android:paddingVertical="16dp">
 
         <TextView
-            android:id="@+id/cart_title"
+            android:id="@+id/order_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/Cart"
+            android:text="@string/order_title_icon"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cart_recycler_view"
+        android:id="@+id/order_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:scrollbars="vertical" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="8dp">
 
-        <TextView
-            android:id="@+id/total_price"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Итого: 0 ₽"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button_checkout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/green"
-            android:text="Оформить заказ"
-            android:textColor="@color/text" />
-    </LinearLayout>
 
     <include
         android:id="@+id/bottom_bar"

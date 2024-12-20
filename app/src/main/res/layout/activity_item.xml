@@ -7,14 +7,9 @@
     android:background="@color/bgYellow"
     tools:context=".ItemActivity">
 
-    <include
-        android:id="@+id/top_bar"
-        layout="@layout/top_bar" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
         android:layout_marginBottom="90dp"
         android:scrollbarTrackVertical="@color/bg">
 
@@ -59,7 +54,9 @@
         android:background="@color/bg"
         android:clipChildren="false"
         android:orientation="horizontal"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:layout_marginBottom="90dp"
+        >
 
         <TextView
             android:id="@+id/item_price"
@@ -79,4 +76,8 @@
             android:text="@string/PayButton"
             android:textColor="@color/text" />
     </LinearLayout>
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_bar"
+        />
 </FrameLayout>

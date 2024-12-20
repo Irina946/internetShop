@@ -15,4 +15,7 @@
     <string name="DescTitle">Описание товара:</string>
     <string name="ButtonBack">Назад</string>
     <string name="Cart">Корзина</string>
+    <string name="main_title_icon">главная страница</string>
+    <string name="order_title_icon">Заказы</string>
+    <string name="sum_order">Заказ на сумму:</string>
 </resources>

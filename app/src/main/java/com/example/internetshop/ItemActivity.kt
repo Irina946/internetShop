@@ -22,10 +22,11 @@ class ItemActivity : AppCompatActivity() {
         val text: TextView = findViewById(R.id.item_description)
         val price: TextView = findViewById(R.id.item_price)
         val imageView: ImageView = findViewById(R.id.item_image)
-        val buttonBack: Button = findViewById(R.id.button_back)
-        val cartIcon: ImageView = findViewById(R.id.cart_icon)
+        val cartIcon: ImageView = findViewById(R.id.cart_icon_bottom)
+        val mainIcon: ImageView = findViewById(R.id.main_icon)
         val buttonBuy: Button = findViewById(R.id.button_buy)
-        cartCountTextView = findViewById(R.id.cart_count)
+        val orderIcon: ImageView = findViewById(R.id.order_icon)
+        cartCountTextView = findViewById(R.id.cart_count_bottom)
 
         updateCartCount()
 
@@ -33,17 +34,24 @@ class ItemActivity : AppCompatActivity() {
         text.text = intent.getStringExtra("itemDesc")
         price.text = "Цена: " + intent.getStringExtra("itemPrice")
         val imageName = intent.getStringExtra("itemImageName")
-        imageName?.let {
-            val imageId = resources.getIdentifier(it, "drawable", packageName)
-            imageView.setImageResource(imageId)
-        }
 
-        buttonBack.setOnClickListener {
-            finish()
+        imageName?.let {
+            val imageId = resources.getIdentifier(imageName, "drawable", packageName)
+            imageView.setImageResource(imageId)
         }
 
         cartIcon.setOnClickListener {
             val intent = Intent(this, ShoppingCartActivity::class.java)
+            startActivity(intent)
+        }
+
+        mainIcon.setOnClickListener {
+            val intent = Intent(this, ItemsActivity::class.java)
+            startActivity(intent)
+        }
+
+        orderIcon.setOnClickListener{
+            val intent = Intent(this, OrderActivity::class.java)
             startActivity(intent)
         }
 
@@ -62,8 +70,6 @@ class ItemActivity : AppCompatActivity() {
         var itemPriceString = intent.getStringExtra("itemPrice") ?: return
         itemPriceString = itemPriceString.replace(Regex("[^0-9]"), "")
         val itemPrice = itemPriceString.toIntOrNull() ?: return
-
-        Log.d("Cart", "Adding item: $itemTitle at price: $itemPrice")
 
         Singleton.CartManager.addItem(CartItem(itemTitle, itemPrice))
         updateCartCount()
